@@ -1,0 +1,5 @@
+import { notFound } from 'next/navigation';
+import { projects } from '@/data/content';
+import { PageIntro } from '@/components/site';
+export function generateStaticParams(){return projects.length?projects.map(p=>({slug:p.slug})):[{slug:'coming-soon'}]}
+export default async function ProjectDetail({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const project=projects.find(p=>p.slug===slug);if(!project){if(slug==='coming-soon'&&projects.length===0)return <PageIntro number="03" kicker="CASE STUDY PLACEHOLDER" title="Coming soon" description="A project case study will be added when verified details are available."/>;notFound()}return <><PageIntro number="03" kicker={project.category} title={project.title} description={project.description}/><section className="section wrap reading"><h2>Project overview</h2><p>{project.overview||project.description}</p><h3>Role</h3><p>{project.role}</p>{project.stack.length>0&&<><h3>Technology stack</h3><div className="tags">{project.stack.map(s=><span key={s}>{s}</span>)}</div></>}</section></>}

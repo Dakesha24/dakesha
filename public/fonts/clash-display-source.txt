@@ -1,0 +1,5 @@
+Clash Display Semibold
+Designed by Indian Type Foundry.
+Source and licensing terms: https://www.fontshare.com/fonts/clash-display
+Fontshare CSS source: https://api.fontshare.com/v2/css?f[]=clash-display@600&display=swap
+The original WOFF2 font is served locally without modification.

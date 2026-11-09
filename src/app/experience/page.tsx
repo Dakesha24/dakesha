@@ -1,0 +1,4 @@
+import type { Metadata } from 'next';
+import { ExperienceList, PageIntro } from '@/components/site';
+export const metadata:Metadata={title:'Experience',description:'Explore Danis’s professional, teaching, community, and leadership experience.'};
+export default function Experience(){return <><PageIntro number="02" kicker="EXPERIENCE" title="The journey so far" description="A timeline of building, teaching, and learning alongside others. Some experiences overlap, reflecting the different communities and projects I was part of."/><section className="section wrap"><div className="experience-layout"><div className="experience-aside"><span className="eyebrow">2023 — 2026</span><p>Each experience has shaped how I approach problems and work with people.</p><span className="aside-mark">↘</span></div><ExperienceList/></div></section></>}

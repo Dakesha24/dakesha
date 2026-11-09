@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 64 1200 656" fill="none">
+  <style>circle[cx="38"][cy="32"],circle[cx="64"][cy="32"],circle[cx="90"][cy="32"]{display:none}</style>
+  <rect width="1200" height="720" rx="28" fill="#F3F5F8"/>
+  <rect x="0" y="0" width="1200" height="64" rx="28" fill="#fff"/>
+  <path d="M0 36a28 28 0 0 1 28-28h1144a28 28 0 0 1 28 28v28H0V36Z" fill="#fff"/>
+  <circle cx="38" cy="32" r="8" fill="#F28A42"/><circle cx="64" cy="32" r="8" fill="#D9DEE8"/><circle cx="90" cy="32" r="8" fill="#D9DEE8"/>
+  <rect x="28" y="94" width="218" height="598" rx="16" fill="#172B4D"/>
+  <rect x="52" y="121" width="30" height="30" rx="9" fill="#F28A42"/><path d="M61 136h12M67 130v12" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <text x="94" y="142" fill="white" font-family="Arial,sans-serif" font-size="18" font-weight="700">LEARNSPACE</text>
+  <rect x="48" y="185" width="178" height="42" rx="10" fill="#294366"/><circle cx="68" cy="206" r="6" fill="#F28A42"/><path d="M88 206h81" stroke="#fff" stroke-opacity=".9" stroke-width="8" stroke-linecap="round"/>
+  <path d="M65 260h112M65 308h92M65 356h119M65 404h87" stroke="#AFC0D5" stroke-opacity=".7" stroke-width="8" stroke-linecap="round"/>
+  <text x="282" y="131" fill="#748199" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="2">ASSESSMENT CENTER</text>
+  <text x="282" y="174" fill="#172B4D" font-family="Arial,sans-serif" font-size="30" font-weight="700">Digital Competency Test</text>
+  <rect x="282" y="204" width="875" height="1" fill="#DCE2EA"/>
+  <rect x="282" y="232" width="550" height="410" rx="18" fill="white"/>
+  <text x="316" y="274" fill="#172B4D" font-family="Arial,sans-serif" font-size="18" font-weight="700">Question 08 <tspan fill="#8792A5" font-size="14" font-weight="400">of 20</tspan></text>
+  <rect x="316" y="292" width="480" height="7" rx="4" fill="#E9EDF3"/><rect x="316" y="292" width="192" height="7" rx="4" fill="#F28A42"/>
+  <text x="316" y="346" fill="#28364D" font-family="Arial,sans-serif" font-size="17">Which approach best protects user data</text><text x="316" y="373" fill="#28364D" font-family="Arial,sans-serif" font-size="17">during an API request?</text>
+  <rect x="316" y="401" width="482" height="52" rx="11" fill="#FFF8F3" stroke="#F28A42" stroke-width="2"/><circle cx="340" cy="427" r="9" stroke="#F28A42" stroke-width="2"/><circle cx="340" cy="427" r="4" fill="#F28A42"/><text x="362" y="433" fill="#29374D" font-family="Arial,sans-serif" font-size="15">Use secure transport and validate access</text>
+  <rect x="316" y="465" width="482" height="52" rx="11" fill="#fff" stroke="#E1E6ED" stroke-width="2"/><circle cx="340" cy="491" r="9" stroke="#CFD6E0" stroke-width="2"/><text x="362" y="497" fill="#667287" font-family="Arial,sans-serif" font-size="15">Store credentials in client-side code</text>
+  <rect x="316" y="529" width="482" height="52" rx="11" fill="#fff" stroke="#E1E6ED" stroke-width="2"/><circle cx="340" cy="555" r="9" stroke="#CFD6E0" stroke-width="2"/><text x="362" y="561" fill="#667287" font-family="Arial,sans-serif" font-size="15">Share tokens in query parameters</text>
+  <rect x="316" y="602" width="142" height="36" rx="9" fill="#172B4D"/><text x="344" y="625" fill="white" font-family="Arial,sans-serif" font-size="13" font-weight="700">Save answer</text>
+  <rect x="854" y="232" width="303" height="196" rx="18" fill="#fff"/><text x="882" y="271" fill="#748199" font-family="Arial,sans-serif" font-size="13" font-weight="700">ASSESSMENT PROGRESS</text><text x="882" y="324" fill="#172B4D" font-family="Arial,sans-serif" font-size="38" font-weight="700">40%</text><text x="882" y="351" fill="#748199" font-family="Arial,sans-serif" font-size="13">8 of 20 questions answered</text>
+  <rect x="882" y="379" width="244" height="8" rx="4" fill="#E9EDF3"/><rect x="882" y="379" width="98" height="8" rx="4" fill="#F28A42"/>
+  <rect x="854" y="448" width="303" height="194" rx="18" fill="#FFF3E9"/><circle cx="902" cy="496" r="22" fill="#FCE0C8"/><path d="M894 496h16M902 488v16" stroke="#C75B1A" stroke-width="2" stroke-linecap="round"/><text x="882" y="548" fill="#172B4D" font-family="Arial,sans-serif" font-size="16" font-weight="700">Concept preview</text><text x="882" y="575" fill="#667287" font-family="Arial,sans-serif" font-size="13">Sample assessment interface</text>
+</svg>

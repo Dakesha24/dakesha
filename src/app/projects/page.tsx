@@ -1,0 +1,7 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
+import { PageIntro } from '@/components/site';
+import { projects } from '@/data/content';
+export const metadata:Metadata={title:'Projects',description:'Selected applications, technical solutions, and digital experiences by Danis.'};
+export default function Projects(){return <><PageIntro number="03" kicker="SELECTED WORKS" title="Made with purpose" description="A collection of applications, technical solutions, and digital experiences I’ve worked on."/><section className="section wrap">{projects.length? <div className="skills-grid">{projects.map(p=><article className="skill-card" key={p.slug}><span className="category">{p.category}</span><h2>{p.title}</h2><p>{p.description}</p><div className="tags">{p.stack.map(s=><span key={s}>{s}</span>)}</div><Link className="text-link" href={`/projects/${p.slug}`}>View case study <ArrowUpRight size={16}/></Link></article>)}</div>:<div className="empty-state"><span className="empty-symbol">↗</span><div><div className="eyebrow">CASE STUDIES IN PROGRESS</div><h2>Thoughtful work, coming soon.</h2><p>Project details and screenshots will be added when they are ready to share. In the meantime, explore the experience behind the work.</p><Link className="text-link" href="/experience">Explore experience <ArrowUpRight size={16}/></Link></div></div>}</section></>}
