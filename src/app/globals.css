@@ -745,15 +745,16 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',Aria
 .education-section-heading{margin-bottom:25px;padding-bottom:12px;border-bottom:1px solid var(--line)}
 .education-section-heading h2{margin:0;font-size:clamp(38px,4.2vw,54px);font-weight:600;letter-spacing:-.055em}
 .education-layout{display:grid;grid-template-columns:minmax(250px,.78fr) minmax(0,1.35fr);gap:clamp(28px,5vw,70px);align-items:start}
-.education-photo{position:relative;min-height:440px;aspect-ratio:4/5;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
-.education-photo img{position:absolute;top:0;left:-21.5%;display:block;width:143%;height:143%;max-width:none;object-fit:cover;transform:scaleX(-1)}
+.education-photo{position:relative;aspect-ratio:1;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.education-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;object-fit:contain;object-position:center}
 .education-photo span{position:absolute;right:13px;bottom:13px;padding:7px 10px;border:1px solid #ffffff55;border-radius:999px;background:#111827b8;color:white;font:9px 'DM Mono',monospace;letter-spacing:.08em}
 .education-content{min-width:0}
 .education-degree{padding-bottom:21px;border-bottom:1px solid var(--line)}
 .education-degree h3{margin:9px 0 2px;font-size:clamp(21px,2.2vw,28px);line-height:1.2;letter-spacing:-.04em}
 .education-degree .organization{font-size:14px}
 .education-degree>p:not(.organization){max-width:70ch;margin:11px 0 0;color:var(--muted);font-size:12px;line-height:1.65}
-.education-degree .tags{margin-top:13px}
+.education-degree .tags{gap:9px;margin-top:15px}
+.education-degree .tags span{padding:7px 11px;font-size:12px;font-weight:600;line-height:1.35}
 .education-campus-experiences{display:grid;gap:0;margin-top:20px}
 .education-campus-experiences>.eyebrow{margin-bottom:4px;font-size:9px}
 .education-campus-item{padding:13px 0;border-bottom:1px solid var(--line)}
@@ -762,8 +763,17 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',Aria
 .education-campus-top span{flex:0 0 auto;color:var(--muted);font-size:10px}
 .education-campus-item .organization{margin-top:2px;font-size:11px}
 .education-campus-item>p:last-child{margin:5px 0 0;color:var(--muted);font-size:11px;line-height:1.55}
+.contact-closing{display:flex;min-height:calc(100svh - 84px);align-items:center;padding-top:54px;padding-bottom:54px;border-top:1px solid var(--line);background:var(--surface)}
+.contact-closing-inner{display:flex;align-items:center;justify-content:space-between;gap:28px}
+.contact-closing-inner p{margin:0 0 3px;color:var(--muted);font-size:12px}
+.contact-closing-inner h2{margin:0;font-size:clamp(64px,9.3vw,138px);font-weight:700;line-height:.92;letter-spacing:-.085em;white-space:nowrap}
+.contact-closing-inner h2 em{color:var(--hero-role);font-family:inherit;font-weight:700;font-style:normal;letter-spacing:-.085em}
+.contact-socials{display:flex;align-items:center;gap:10px}
+.contact-socials a{display:grid;width:46px;height:46px;place-items:center;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--text);transition:transform .2s,border-color .2s,color .2s,background .2s}
+.contact-socials a:hover{transform:translateY(-2px);border-color:var(--hero-role);background:var(--accent-bg);color:var(--hero-role)}
+@media(max-width:560px){.contact-closing{min-height:calc(100svh - 70px);padding-top:38px;padding-bottom:38px}.contact-closing-inner{align-items:flex-start;flex-direction:column;gap:20px}.contact-closing-inner h2{font-size:clamp(54px,14vw,78px);white-space:normal}.contact-closing-inner h2 em{display:block}.contact-socials{gap:8px}}
 @media(max-width:800px){.experience-showcase{grid-template-columns:1fr;gap:16px}.experience-role{padding:0 0 4px}.experience-media-frame{height:min(42vw,210px)}.experience-media-empty{min-height:min(70vw,360px)}}
-@media(max-width:800px){.education-layout{grid-template-columns:1fr;gap:25px}.education-photo{width:min(100%,420px);min-height:0;aspect-ratio:4/4.6}.education-photo img{width:143%;height:143%}}
+@media(max-width:800px){.education-layout{grid-template-columns:1fr;gap:25px}.education-photo{width:min(100%,420px);aspect-ratio:1}}
 @media(max-width:520px){.experience-projects{padding:8px}.experience-projects-heading{align-items:flex-start;flex-wrap:wrap}.project-controls{margin-left:auto}.experience-company{align-items:flex-start;gap:12px}.experience-company h3{font-size:16px}.experience-media-copy{align-items:flex-start}.experience-media-description{font-size:11px}.experience-media-dialog{padding:10px}}
 
 .brand-lockup {
