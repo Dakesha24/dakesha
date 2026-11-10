@@ -20,6 +20,7 @@ const aboutToolGroups=[
  {title:'DevOps & Deployment',icon:Rocket,tools:[['Docker','docker.svg'],['GitHub Actions','github-actions.svg'],['Vercel','vercel.svg'],['FileZilla','filezilla.svg']]},
  {title:'System Architecture',icon:Network,tools:[['Draw.io','drawio.svg'],['Mermaid','mermaid.svg']]},
 ] as const;
+const experienceCompanyLogos:Record<string,string>={eduverse:'/images/logo/eduverse.png',kubik:'/images/logo/logo-kromosomid.png',smkn:'/images/logo/logo-smkn4.png',bem:'/images/logo/LOGO KEMAKOM.png'};
 
 function BrandMark(){return <svg className="brand-mark" viewBox="0 0 56 48" fill="none" aria-hidden="true" focusable="false"><path d="M4 5h11c10 0 16 6.4 16 19s-6 19-16 19H4V5Zm7 7v24h4c5.7 0 9-3.9 9-12s-3.3-12-9-12h-4Z" fill="currentColor" fillRule="evenodd"/><path d="M33 5h6v14L49 5h5L43 23.9 54 43h-7.3L39 29.6V43h-6V5Z" fill="var(--green)"/></svg>}
 export function Header(){const {language}=useLanguage();return <header className="header"><div className="wrap header-inner"><Link href="/" className="brand-mark-link" aria-label="Danis Keysara Saputra home"><BrandMark/></Link><DesktopNav/><div className="header-controls"><LanguageToggle/><ThemeToggle/><Link className="header-cta" href="/#contact">{tr('Get in touch',language)} <ArrowUpRight size={15}/></Link></div><MobileNav/></div></header>}
@@ -139,7 +140,7 @@ function ExperienceEntry({job}:{job:typeof experiences[number]}){
  const hiddenProjectCount=companyProjects.length-visibleProjects.length;
  return <article className="experience-showcase">
   <article className="experience-role">
-   <div className="experience-company"><span className="company-mark" aria-hidden="true"><Building2 size={21}/></span><div className="experience-company-details"><h4 className="experience-role-title">{tr(job.role,language)}</h4><div className="experience-company-name"><h3>{job.org}</h3>{job.id==='eduverse'&&<span className="experience-contract">{language==='id'?'Kontrak':'Contract'}</span>}</div><p>{job.period}</p></div></div>
+   <div className="experience-company"><span className={`company-mark${experienceCompanyLogos[job.id]?' has-logo':''}`} aria-hidden="true">{experienceCompanyLogos[job.id]?<img src={experienceCompanyLogos[job.id]} alt=""/>:<Building2 size={21}/>}</span><div className="experience-company-details"><h4 className="experience-role-title">{tr(job.role,language)}</h4><div className="experience-company-name"><h3>{job.org}</h3>{job.id==='eduverse'&&<span className="experience-contract">{language==='id'?'Kontrak':'Contract'}</span>}</div><p>{job.period}</p></div></div>
    <p className="experience-summary">{local?.description||tr(job.description,language)}</p>
    <ul className="experience-responsibilities">{(local?.responsibilities||job.responsibilities.map(item=>tr(item,language))).map(item=><li key={item}>{item}</li>)}</ul>
    {job.skills&&<div className="tags">{job.skills.map(skill=><span key={skill}>{skill}</span>)}</div>}

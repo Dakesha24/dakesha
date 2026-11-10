@@ -683,6 +683,8 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',Aria
 .experience-role-title{font-size:clamp(19px,1.8vw,22px);line-height:1.2;letter-spacing:-.035em;margin:0 0 4px;font-weight:600}
 .experience-company{display:flex;align-items:flex-start;gap:11px;margin-bottom:11px}
 .company-mark{width:48px;height:48px;flex:0 0 48px;display:grid;place-items:center;border:1px solid var(--line);border-radius:13px;background:var(--surface);color:var(--green)}
+.company-mark.has-logo{padding:4px;background:#fff}
+.company-mark img{display:block;width:100%;height:100%;object-fit:contain}
 .experience-company-details{min-width:0}
 .experience-company-name{display:flex;align-items:center;flex-wrap:wrap;gap:9px}
 .experience-company h3{font-size:15px;line-height:1.3;letter-spacing:-.025em;margin:0}
