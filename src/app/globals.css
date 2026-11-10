@@ -707,9 +707,16 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',Aria
 .project-controls button{display:grid;place-items:center;width:32px;height:32px;padding:0;border:1px solid color-mix(in srgb,var(--hero-role) 45%,var(--line));border-radius:50%;background:var(--accent-bg);color:var(--hero-role);cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
 .project-controls button:hover{transform:scale(1.07);border-color:var(--hero-role);background:var(--hero-role);color:var(--button-text)}
 .experience-media-wrap{position:relative}
+.experience-project-overview{min-height:clamp(160px,15vw,200px);display:flex;align-items:center;gap:17px;padding:clamp(18px,3vw,30px);border:1px dashed var(--line);border-radius:8px;background:radial-gradient(ellipse at 12% 50%,var(--accent-bg),var(--panel) 68%)}
+.experience-overview-icon{display:grid;flex:0 0 42px;width:42px;height:42px;place-items:center;border:1px solid color-mix(in srgb,var(--hero-role) 45%,var(--line));border-radius:12px;background:var(--surface);color:var(--hero-role)}
+.experience-project-overview .eyebrow{font-size:9px}
+.experience-project-overview p{max-width:60ch;margin:8px 0 0;color:var(--muted);font-size:13px;line-height:1.6}
 .experience-media-frame{height:clamp(160px,15vw,200px);background:var(--panel);overflow:hidden;border-radius:8px;display:grid;place-items:center}
 .experience-media-open{position:relative;display:grid;width:100%;height:100%;padding:0;place-items:center;overflow:hidden;border:0;background:transparent;cursor:zoom-in}
 .experience-media-frame img,.experience-media-frame video{display:block;width:100%;height:100%;object-fit:contain}
+.experience-media-image,.experience-media-dialog-image{position:relative;display:block;width:100%;height:100%;overflow:hidden;background:var(--panel)}
+.experience-media-image .experience-media-backdrop,.experience-media-dialog-image .experience-media-backdrop{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(18px) brightness(.58);transform:scale(1.08)}
+.experience-media-image .experience-media-foreground,.experience-media-dialog-image .experience-media-foreground{position:relative;z-index:1;width:100%;height:100%;object-fit:contain}
 .experience-media-zoom{position:absolute;right:9px;top:9px;display:grid;width:30px;height:30px;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--text);opacity:0;transition:opacity .18s}
 .experience-media-open:hover .experience-media-zoom,.experience-media-open:focus-visible .experience-media-zoom{opacity:1}
 .media-arrow{position:absolute;top:50%;z-index:2;display:grid;place-items:center;width:32px;height:32px;padding:0;transform:translateY(-50%);border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--text);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
@@ -734,7 +741,8 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',Aria
 .experience-media-dialog::backdrop{background:rgba(2,8,18,.76)}
 .experience-media-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:10px}
 .experience-media-dialog-head strong{font-size:14px;font-weight:600}
-.experience-media-dialog>img,.experience-media-dialog>video{display:block;width:100%;max-height:clamp(180px,36vh,320px);margin:auto;object-fit:contain;border-radius:10px;background:var(--panel)}
+.experience-media-dialog>video{display:block;width:100%;max-height:clamp(180px,36vh,320px);margin:auto;object-fit:contain;border-radius:10px;background:var(--panel)}
+.experience-media-dialog-image{height:clamp(180px,36vh,320px);border-radius:10px}
 .experience-media-dialog-description{margin:14px 2px 2px;color:var(--muted);font-size:13px;line-height:1.7;max-width:75ch}
 .experience-media-empty p{font-size:12px;line-height:1.55;color:var(--muted);margin:0}
 .experience-media-empty{min-height:clamp(280px,32vw,410px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:25px;border:1px dashed var(--line);border-radius:9px;background:radial-gradient(ellipse at 50% 35%,color-mix(in srgb,var(--green) 9%,var(--surface)),var(--surface) 65%)}
